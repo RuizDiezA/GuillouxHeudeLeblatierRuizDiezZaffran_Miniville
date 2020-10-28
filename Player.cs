@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.Text;
 
@@ -14,18 +14,18 @@ namespace Miniville
         {
             this.money = 2;
             this.hand = new List<Cards>();
-            hand.Add(new Cards("Boulangerie", "green", 1, new List<int> { 2, 3 }, "Recevez 1 pièce"));
-            hand.Add(new Cards("Champs de blé", "blue", 1, new List<int> { 1 }, "Recevez 1 pièce"));
+            this.hand.Add(new Cards("Boulangerie", "green", 1, new List<int> { 2, 3 }, "Recevez 1 pièce"));
+            this.hand.Add(new Cards("Champs de blé", "blue", 1, new List<int> { 1 }, "Recevez 1 pièce"));
             this.name = "Player";
         }
 
         //TEST CHANGEMENT
-        public Player(int money, Piles hand, string name)
+        public Player(int money, string name)
         {
             this.money = money;
             this.hand = new List<Cards>();
-            hand.Add(new Cards("Boulangerie", "green", 1, new List<int> { 2, 3 }, "Recevez 1 pièce"));
-            hand.Add(new Cards("Champs de blé", "blue", 1, new List<int> { 1 }, "Recevez 1 pièce"));
+            this.hand.Add(new Cards("Boulangerie", "green", 1, new List<int> { 2, 3 }, "Recevez 1 pièce"));
+            this.hand.Add(new Cards("Champs de blé", "blue", 1, new List<int> { 1 }, "Recevez 1 pièce"));
             this.name = name;
         }
 
@@ -41,33 +41,35 @@ namespace Miniville
             if (money >= card.price)
             {
                 money -= card.price;
-                hand.Add(card);
+                this.hand.Add(card);
             }
         }
 
         public Cards ChooseCard(List<List<Cards>> cardsList)
         {
-            List<Cards> DisplayList = new List<Cards>();
+            List<Cards> displayList = new List<Cards>();
             foreach(List<Cards> list in cardsList)
             {
                 if (list.Count >= 0)
                 {
-                    finalList.Add(list<Cards>[0]);
+                    displayList.Add(list[0]);
                 }
             }
 
             Console.WriteLine("Veuillez choisir une carte :");
 
-            for (int i = 0; i < finalList.Count(); i++)
+            for (int i = 0; i < displayList.Count; i++)
             {
-                Console.WriteLine(i + " : " + finalList[i]);
+                Console.WriteLine(i + " : " + displayList[i]);
             }
 
-            int choice = Console.ReadLine();
+            int choice = Convert.ToInt32(Console.ReadLine());
 
-            BuyCard(finalList[choice]);
+            //TEEEEEEEST
 
-            return finalList[choice];
+            BuyCard(displayList[choice]);
+
+            return displayList[choice];
         }
     }
 }
