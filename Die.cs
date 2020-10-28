@@ -10,33 +10,6 @@ namespace Miniville
         public int value;
         public int nbCotes;
 
-<<<<<<< HEAD
-        public Die()
-        {
-            Random rand = new Random();
-
-
-
-        }
-
-
-        public int Lancer()
-        {
-
-
-
-            return value;
-        }
-
-
-
-        public override string ToString()
-        {
-            string toString="";
-
-
-            return toString;
-=======
 
         //Constructeur
         public Die(int nbCotes)
@@ -72,7 +45,6 @@ namespace Miniville
 
 
             return toString;
->>>>>>> main
         }
 
 

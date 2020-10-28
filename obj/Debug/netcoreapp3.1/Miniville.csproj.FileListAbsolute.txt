@@ -1,0 +1,13 @@
+C:\Users\ruizd\OneDrive\Documents\GitHub\GuillouxHeudeLeblatierRuizDiezZaffran_Miniville\obj\Debug\netcoreapp3.1\Miniville.AssemblyInfoInputs.cache
+C:\Users\ruizd\OneDrive\Documents\GitHub\GuillouxHeudeLeblatierRuizDiezZaffran_Miniville\obj\Debug\netcoreapp3.1\Miniville.AssemblyInfo.cs
+C:\Users\ruizd\OneDrive\Documents\GitHub\GuillouxHeudeLeblatierRuizDiezZaffran_Miniville\obj\Debug\netcoreapp3.1\Miniville.csproj.CoreCompileInputs.cache
+C:\Users\ruizd\OneDrive\Documents\GitHub\GuillouxHeudeLeblatierRuizDiezZaffran_Miniville\bin\Debug\netcoreapp3.1\Miniville.exe
+C:\Users\ruizd\OneDrive\Documents\GitHub\GuillouxHeudeLeblatierRuizDiezZaffran_Miniville\bin\Debug\netcoreapp3.1\Miniville.deps.json
+C:\Users\ruizd\OneDrive\Documents\GitHub\GuillouxHeudeLeblatierRuizDiezZaffran_Miniville\bin\Debug\netcoreapp3.1\Miniville.runtimeconfig.json
+C:\Users\ruizd\OneDrive\Documents\GitHub\GuillouxHeudeLeblatierRuizDiezZaffran_Miniville\bin\Debug\netcoreapp3.1\Miniville.runtimeconfig.dev.json
+C:\Users\ruizd\OneDrive\Documents\GitHub\GuillouxHeudeLeblatierRuizDiezZaffran_Miniville\bin\Debug\netcoreapp3.1\Miniville.dll
+C:\Users\ruizd\OneDrive\Documents\GitHub\GuillouxHeudeLeblatierRuizDiezZaffran_Miniville\bin\Debug\netcoreapp3.1\Miniville.pdb
+C:\Users\ruizd\OneDrive\Documents\GitHub\GuillouxHeudeLeblatierRuizDiezZaffran_Miniville\obj\Debug\netcoreapp3.1\Miniville.csprojAssemblyReference.cache
+C:\Users\ruizd\OneDrive\Documents\GitHub\GuillouxHeudeLeblatierRuizDiezZaffran_Miniville\obj\Debug\netcoreapp3.1\Miniville.dll
+C:\Users\ruizd\OneDrive\Documents\GitHub\GuillouxHeudeLeblatierRuizDiezZaffran_Miniville\obj\Debug\netcoreapp3.1\Miniville.pdb
+C:\Users\ruizd\OneDrive\Documents\GitHub\GuillouxHeudeLeblatierRuizDiezZaffran_Miniville\obj\Debug\netcoreapp3.1\Miniville.genruntimeconfig.cache
