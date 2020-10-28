@@ -18,8 +18,6 @@ namespace Miniville
 
             void CheckAndApplyEffect(int prix, string color)
             {
-                {
-                }
             }
         }
     }
