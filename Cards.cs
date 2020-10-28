@@ -49,6 +49,4 @@ namespace Miniville
             return base.ToString();
         }
     }
-    
-
 }
