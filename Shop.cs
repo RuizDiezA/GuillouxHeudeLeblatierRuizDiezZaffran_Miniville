@@ -1,10 +1,13 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Text;
+
 
 namespace Miniville
 {
     class Shop
     {
+
 
         List<Cards> ChampsBle = new List<Cards>();
         List<Cards> Ferme = new List<Cards>();
@@ -48,7 +51,4 @@ namespace Miniville
         }
     }
 
-    
-
-    
 }
