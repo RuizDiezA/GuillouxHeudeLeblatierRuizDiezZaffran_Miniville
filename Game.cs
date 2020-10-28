@@ -11,8 +11,8 @@ namespace Miniville
 
         public Die die;
         public Shop shop = new Shop();
-        
-        public Game ()
+
+        public Game()
         {
             die = new Die(6);
         }
@@ -43,6 +43,5 @@ namespace Miniville
         {
             return base.ToString();
         }
-
     }
 }
