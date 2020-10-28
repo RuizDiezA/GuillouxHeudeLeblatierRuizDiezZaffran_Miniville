@@ -65,6 +65,7 @@ namespace Miniville
 
             int choice = Convert.ToInt32(Console.ReadLine());
 
+            //TEEEEEEEST
 
             BuyCard(displayList[choice]);
 
