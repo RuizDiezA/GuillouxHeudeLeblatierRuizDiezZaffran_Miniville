@@ -8,29 +8,40 @@ namespace Miniville
     {
 
         public int value;
+        public int nbCotes;
 
-        public Die()
+
+        //Constructeur
+        public Die(int nbCotes)
         {
-            Random rand = new Random();
-
-
+            this.nbCotes = nbCotes;
+            
 
         }
 
-
+        
+        //Lancer
         public int Lancer()
         {
 
+
+
+            Random rand = new Random();
+
+            //Valeur entre 1 et le max de côté du dé
+            value = rand.Next(1, nbCotes+1);
 
 
             return value;
         }
 
 
-
+        //Message
         public override string ToString()
         {
-            string toString="";
+            string toString = base.ToString();
+
+            toString += String.Format("Valeur: {0}", Lancer());
 
 
             return toString;
