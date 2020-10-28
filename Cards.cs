@@ -47,7 +47,6 @@ namespace Miniville
             toString += "\n";
 
             return base.ToString();
-
         }
     }
 }
