@@ -1,10 +1,14 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.Text;
 
 namespace Miniville
 {
-    class GreenCard
+    public class GreenCard
     {
+        void CheckAndApplyEffect()
+        {
+
+        }
     }
 }
