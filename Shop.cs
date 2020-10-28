@@ -1,4 +1,5 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 
 namespace Miniville
 {
@@ -31,7 +32,22 @@ namespace Miniville
             return Shops;
         }
 
+        public void AfficheShop()
+        {
+            System.Collections.IList list = Shops;
+            for (int i = 0; i < list.Count; i++)
+            {
+                List<string> subList = (List<string>)list[i];
+                Console.WriteLine(subList);
+                /*foreach (string item in subList)
+                {
+                    Console.WriteLine(item);
+                }*/
+            }
+        }
     }
+
+    
 
     
 }
