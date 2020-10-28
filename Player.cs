@@ -18,7 +18,6 @@ namespace Miniville
         public Player(int money, Piles hand, string name)
         {
             this.money = money;
-            //this.hand = new Piles();
             this.hand = new List<Cards>();
             this.name = name;
         }
