@@ -19,7 +19,7 @@ namespace Miniville
             this.name = "Player";
         }
 
-        //TEST
+        //TEST CHANGEMENT
         public Player(int money, string name)
         {
             this.money = money;
