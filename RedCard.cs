@@ -1,10 +1,14 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.Text;
 
 namespace Miniville
 {
-    class RedCard
+    public class RedCard
     {
+        void CheckAndApplyEffect()
+        {
+
+        }
     }
 }
