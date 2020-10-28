@@ -15,7 +15,6 @@ namespace Miniville
 
         }
 
-        //TEST CHANGEMENT
         public Player(int money, Piles hand, string name)
         {
             this.money = money;
