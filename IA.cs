@@ -4,7 +4,7 @@ using System.Text;
 
 namespace Miniville
 {
-    class IA
+    class IA : Player
     {
     }
 }

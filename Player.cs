@@ -7,7 +7,7 @@ namespace Miniville
     class Player
     {
         public int money;
-        public Piles hand;
+        public List<Cards> hand;
         public string name;
 
         public Player()
@@ -18,7 +18,8 @@ namespace Miniville
         public Player(int money, Piles hand, string name)
         {
             this.money = money;
-            this.hand = hand;
+            //this.hand = new Piles();
+            this.hand = new List<Cards>();
             this.name = name;
         }
 
@@ -27,13 +28,18 @@ namespace Miniville
             //Appeler la méthode de checkEffects de la classe piles
         }
 
-        public void BuyCard(int price)
+        public void BuyCard(Cards card)
         {
-            if(money >= price)
-            {
-                money -= price;
-                //Ajouter carte à la main
-            }
+            //if (money >= card.price)
+            //{
+            //    money -= card.price;
+            //    Ajouter carte à la main
+            //}
+        }
+
+        public void ChooseCard(List<Cards> list)
+        {
+
         }
     }
 }
