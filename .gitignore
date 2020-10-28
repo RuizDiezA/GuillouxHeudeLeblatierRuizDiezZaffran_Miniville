@@ -24,3 +24,5 @@ obj/Miniville.csproj.nuget.g.props
 obj/Debug/netcoreapp3.1/Miniville.csprojAssemblyReference.cache
 obj/Debug/netcoreapp3.1/Miniville.assets.cache
 .vs/Miniville/v16/.suo
+bin
+obj
