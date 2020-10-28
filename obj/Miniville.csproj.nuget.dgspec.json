@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\ELE5f89a796a4d86\\Desktop\\GuillouxHeudeLeblatierRuizDiezZaffran_Miniville\\Miniville.csproj": {}
+    "C:\\Users\\ruizd\\OneDrive\\Documents\\GitHub\\GuillouxHeudeLeblatierRuizDiezZaffran_Miniville\\Miniville.csproj": {}
   },
   "projects": {
-    "C:\\Users\\ELE5f89a796a4d86\\Desktop\\GuillouxHeudeLeblatierRuizDiezZaffran_Miniville\\Miniville.csproj": {
+    "C:\\Users\\ruizd\\OneDrive\\Documents\\GitHub\\GuillouxHeudeLeblatierRuizDiezZaffran_Miniville\\Miniville.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\ELE5f89a796a4d86\\Desktop\\GuillouxHeudeLeblatierRuizDiezZaffran_Miniville\\Miniville.csproj",
+        "projectUniqueName": "C:\\Users\\ruizd\\OneDrive\\Documents\\GitHub\\GuillouxHeudeLeblatierRuizDiezZaffran_Miniville\\Miniville.csproj",
         "projectName": "Miniville",
-        "projectPath": "C:\\Users\\ELE5f89a796a4d86\\Desktop\\GuillouxHeudeLeblatierRuizDiezZaffran_Miniville\\Miniville.csproj",
-        "packagesPath": "C:\\Users\\ELE5f89a796a4d86\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\ELE5f89a796a4d86\\Desktop\\GuillouxHeudeLeblatierRuizDiezZaffran_Miniville\\obj\\",
+        "projectPath": "C:\\Users\\ruizd\\OneDrive\\Documents\\GitHub\\GuillouxHeudeLeblatierRuizDiezZaffran_Miniville\\Miniville.csproj",
+        "packagesPath": "C:\\Users\\ruizd\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\ruizd\\OneDrive\\Documents\\GitHub\\GuillouxHeudeLeblatierRuizDiezZaffran_Miniville\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\ELE5f89a796a4d86\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\ruizd\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -52,7 +52,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.403\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.402\\RuntimeIdentifierGraph.json"
         }
       }
     }

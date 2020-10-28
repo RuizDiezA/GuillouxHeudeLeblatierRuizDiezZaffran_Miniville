@@ -8,19 +8,19 @@
     ".NETCoreApp,Version=v3.1": []
   },
   "packageFolders": {
-    "C:\\Users\\jheud\\.nuget\\packages\\": {}
+    "C:\\Users\\ruizd\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\Développement\\PROJETS COURS\\GuillouxHeudeRuizDiezZaffran_Miniville\\Miniville.csproj",
+      "projectUniqueName": "C:\\Users\\ruizd\\OneDrive\\Documents\\GitHub\\GuillouxHeudeLeblatierRuizDiezZaffran_Miniville\\Miniville.csproj",
       "projectName": "Miniville",
-      "projectPath": "D:\\Développement\\PROJETS COURS\\GuillouxHeudeRuizDiezZaffran_Miniville\\Miniville.csproj",
-      "packagesPath": "C:\\Users\\jheud\\.nuget\\packages\\",
-      "outputPath": "D:\\Développement\\PROJETS COURS\\GuillouxHeudeRuizDiezZaffran_Miniville\\obj\\",
+      "projectPath": "C:\\Users\\ruizd\\OneDrive\\Documents\\GitHub\\GuillouxHeudeLeblatierRuizDiezZaffran_Miniville\\Miniville.csproj",
+      "packagesPath": "C:\\Users\\ruizd\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\ruizd\\OneDrive\\Documents\\GitHub\\GuillouxHeudeLeblatierRuizDiezZaffran_Miniville\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\jheud\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\ruizd\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -34,10 +34,32 @@
         "netcoreapp3.1": {
           "projectReferences": {}
         }
+      },
+      "warningProperties": {
+        "warnAsError": [
+          "NU1605"
+        ]
       }
     },
     "frameworks": {
-      "netcoreapp3.1": {}
+      "netcoreapp3.1": {
+        "imports": [
+          "net461",
+          "net462",
+          "net47",
+          "net471",
+          "net472",
+          "net48"
+        ],
+        "assetTargetFallback": true,
+        "warn": true,
+        "frameworkReferences": {
+          "Microsoft.NETCore.App": {
+            "privateAssets": "all"
+          }
+        },
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.402\\RuntimeIdentifierGraph.json"
+      }
     }
   }
 }
