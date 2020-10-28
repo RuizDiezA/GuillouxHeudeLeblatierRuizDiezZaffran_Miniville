@@ -4,7 +4,7 @@ using System.Text;
 
 namespace Miniville
 {
-    public class Cards
+    class Cards
     {
         public string name;
         public string color;
