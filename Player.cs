@@ -12,7 +12,11 @@ namespace Miniville
 
         public Player()
         {
-
+            this.money = 2;
+            this.hand = new List<Cards>();
+            hand.Add(new Cards("Boulangerie", "green", 1, new List<int> { 2, 3 }, "Recevez 1 pièce"));
+            hand.Add(new Cards("Champs de blé", "blue", 1, new List<int> { 1 }, "Recevez 1 pièce"));
+            this.name = "Player";
         }
 
         //TEST CHANGEMENT
@@ -20,8 +24,12 @@ namespace Miniville
         {
             this.money = money;
             this.hand = new List<Cards>();
+            hand.Add(new Cards("Boulangerie", "green", 1, new List<int> { 2, 3 }, "Recevez 1 pièce"));
+            hand.Add(new Cards("Champs de blé", "blue", 1, new List<int> { 1 }, "Recevez 1 pièce"));
             this.name = name;
         }
+
+
 
         public void CheckEffects()
         {
@@ -30,16 +38,36 @@ namespace Miniville
 
         public void BuyCard(Cards card)
         {
-            //if (money >= card.price)
-            //{
-            //    money -= card.price;
-            //    Ajouter carte à la main
-            //}
+            if (money >= card.price)
+            {
+                money -= card.price;
+                hand.Add(card);
+            }
         }
 
-        public void ChooseCard(List<Cards> list)
+        public Cards ChooseCard(List<List<Cards>> cardsList)
         {
+            List<Cards> DisplayList = new List<Cards>();
+            foreach(List<Cards> list in cardsList)
+            {
+                if (list.Count >= 0)
+                {
+                    finalList.Add(list<Cards>[0]);
+                }
+            }
 
+            Console.WriteLine("Veuillez choisir une carte :");
+
+            for (int i = 0; i < finalList.Count(); i++)
+            {
+                Console.WriteLine(i + " : " + finalList[i]);
+            }
+
+            int choice = Console.ReadLine();
+
+            BuyCard(finalList[choice]);
+
+            return finalList[choice];
         }
     }
 }
