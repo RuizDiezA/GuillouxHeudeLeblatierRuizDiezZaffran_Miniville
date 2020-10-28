@@ -1,26 +1,45 @@
 using System;
 using System.Collections.Generic;
+using System.Linq.Expressions;
 using System.Text;
 
 namespace Miniville
 {
-    public class Cards
+    class Cards
     {
-        string color;
-        int prix;
-        List<int> CardsValue = new List<int>();
-        
-        public Cards()
+        public string color;
+        public string name;
+        public string description;
+        public int price;
+        public List<int> numberToRoll;
+        public List<string> Cartes;
+
+
+        public Cards(string name, string color, int price, List<int> numberToRoll, List<string> Cartes, string description)
         {
-            CardsValue.Add(1);
-            CardsValue.Add(2);
-            CardsValue.Add(4);
-            CardsValue.Add(6);
+            this.name = name;
+            this.color = color;
+            this.price = price;
+            this.description = description;
+
+            numberToRoll.Add(1);
+            numberToRoll.Add(2);
+            numberToRoll.Add(3);
+            numberToRoll.Add(4);
+            numberToRoll.Add(5);
+            numberToRoll.Add(6);
+
+            Cartes.Add("Champs de blé");
+            Cartes.Add("Ferme");
+            Cartes.Add("Boulangerie");
+            Cartes.Add("Café");
+            Cartes.Add("Superette");
+            Cartes.Add("Forêt");
+            Cartes.Add("Restaurant");
+            Cartes.Add("Stade");
         }
-        
-        void CheckAndApplyEffect(int prix, string color)
+
+        public void CheckAndApplyEffect()
         {
 
         }
-    }
-}
