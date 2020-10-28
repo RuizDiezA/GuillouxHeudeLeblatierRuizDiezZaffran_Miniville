@@ -1,10 +1,15 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
+using System.Drawing;
 using System.Text;
 
 namespace Miniville
 {
-    class BlueCard
+    public class BlueCard
     {
+        void CheckAndApplyEffect()
+        {
+
+        }
     }
 }
