@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Text;
+using System.Threading;
 
 namespace Miniville
 {
@@ -24,53 +25,57 @@ namespace Miniville
             
             while (player1.money < 20|| player2.money < 20)
             {
+                Console.Clear();
+                DisplayHand();
                 //Tour du joueur 1
-
-                //Affichage de la main.
-                Console.WriteLine("\n\nLe joueur a " + player1.money + "Gold(s) | Voici la main du Joueur :");
-                foreach (Cards elem in player1.hand)
-                {
-                    Console.Write( "| " + elem + " |");
-                }
-                Console.Write('\n');
 
                 //Lancer de dé et résolution des effets.
                 die.Lancer();
-                //player2.ApplyRed("red");
-                //player1.ApplyGreen("green");
+                Console.WriteLine(die);
                 player2.ApplyEffects("red", player1, player2);
                 player1.ApplyEffects("green", player1, player2);
 
-
-
                 //Acheter une nouvelle carte Et l'ajouter à sa main.
                 player1.ChooseCard(shop);
-
+                Thread.Sleep(1000);
+                Console.Clear();
+                DisplayHand();
                 //Tour du joueur 2
 
-                //Affichage de la main
-                Console.WriteLine("\n\nL'ordinateur a " + player2.money + " Gold(s) | Voici la main de l'ordinateur :");
-                foreach (Cards elem in player2.hand)
-                {
-                    Console.Write("| " + elem + " |");
-                }
-                Console.Write('\n');
-
-
                 die.Lancer();
-                //player1.ApplyRed(red);
-                //player2.ApplyGreen(green);
+                Console.WriteLine(die);
                 player2.ApplyEffects("red", player2, player1);
                 player1.ApplyEffects("green", player2, player1);
 
                 player2.ChooseCard(shop);
-
+                Thread.Sleep(1300);
                 Console.WriteLine();
-                Console.WriteLine("FIN DE BOUCLE");
             }
 
             Console.WriteLine();
             Console.WriteLine("FIN DU GAME");
+        }
+
+        public void DisplayHand()
+        {
+            Console.WriteLine("======================================================");
+            Console.WriteLine("VOICI LA MAIN DU JOUEUR | GOLDS : " + player1.money);
+            Console.WriteLine("======================================================");
+            foreach (Cards card in player1.hand)
+            {
+                Console.WriteLine("");
+                Console.WriteLine(card);
+            }
+            Console.WriteLine("======================================================");
+            Console.WriteLine("VOICI LA MAIN DE L'ORDINATEUR | GOLDS : " + player2.money);
+            Console.WriteLine("======================================================");
+            foreach (Cards card in player2.hand)
+            {
+                Console.WriteLine("");
+                Console.WriteLine(card);
+            }
+
+
         }
 
         public override string ToString()

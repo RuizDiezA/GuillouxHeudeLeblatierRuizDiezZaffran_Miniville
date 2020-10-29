@@ -35,21 +35,26 @@ namespace Miniville
             {
                 case 0 :
                     player1.money++;
+                    Console.WriteLine("La carte " + this.name + " est activée, " + player1.name + " gagne une pièce");
                     break;
                 case 1:
                     player1.money += 2;
+                    Console.WriteLine("La carte " + this.name + " est activée, " + player1.name + " gagne deux pièces");
                     break;
                 case 2:
                     player1.money += 3;
+                    Console.WriteLine("La carte " + this.name + " est activée, " + player1.name + " gagne trois pièces");
                     break;
                 case 3:
                     player1.money += 4;
+                    Console.WriteLine("La carte " + this.name + " est activée, " + player1.name + " gagne quatre pièces");
                     break;
                 case 4:
                     if (player1.money > 0)
                     {
                         player1.money -= 1;
                         player2.money++;
+                        Console.WriteLine("La carte " + this.name + " est activée, " + player1.name + " donne 1 pièce à " + player2.name);
                     }
                     break;
                 case 5:
@@ -57,12 +62,16 @@ namespace Miniville
                     {
                         player1.money -= 2;
                         player2.money += 2;
+                        Console.WriteLine("La carte " + this.name + " est activée, " + player1.name + " donne 2 pièce à " + player2.name);
                     }
                     else if (player1.money > 0)
                     {
                         player1.money -= 1;
                         player2.money++;
+                        Console.WriteLine("La carte " + this.name + " est activée, " + player1.name + " est fauché, il ne donne qu'1 pièce à " + player2.name);
                     }
+                    else
+                        Console.WriteLine("La carte " + this.name + " est activée, " + player1.name + " est fauché, il ne peut rien donner à " + player2.name);
                     break;
                 default:
                     break;
@@ -72,10 +81,10 @@ namespace Miniville
         public override string ToString()
         {
             string toString = "";
-            toString += "Nom : " + name + "\n";
-            toString += "Color : " + color + "\n";
-            toString += "Prix : " + price + "\n";
-            toString += "S'active pour : ";
+            toString += "Nom : " + name;
+            toString += " Couleur : " + color;
+            toString += " Prix : " + price;
+            toString += " S'active si le dé = ";
             foreach (int num in numberToRoll)
             {
                 toString += num + ", ";
