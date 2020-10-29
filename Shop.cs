@@ -24,14 +24,14 @@ namespace Miniville
         {
             for(int i = 0; i < 6; i++)
             {
-                ChampsBle.Add(new Cards("Champs de blé", "blue", 1, new List<int> { 1 }, 0));
-                Ferme.Add(new Cards("Ferme", "blue", 2, new List<int> { 1 }, 0));
-                Boulangerie.Add(new Cards("Boulangerie", "green", 1, new List<int> { 2, 3 }, 1));
-                Cafe.Add(new Cards("Café", "red", 2, new List<int> { 3 }, 4));
-                Superette.Add(new Cards("Superette", "green", 2, new List<int> { 4 }, 2));
-                Foret.Add(new Cards("Forêt", "blue", 2, new List<int> { 5 }, 0));
-                Restaurant.Add(new Cards("Restaurant", "red", 4, new List<int> { 5 }, 5));
-                Stade.Add(new Cards("Stade", "blue", 6, new List<int> { 6 }, 3));
+                ChampsBle.Add(new Cards("Champs de blé", "blue", 1, new List<int> { 1 },"Recevez 1 pièce de la banque", 0));
+                Ferme.Add(new Cards("Ferme", "blue", 2, new List<int> { 1 },"Recevez 1 pièce de la banque", 0));
+                Boulangerie.Add(new Cards("Boulangerie", "green", 1, new List<int> { 2, 3 }, "Recevez 2 pièces de la banque", 1));
+                Cafe.Add(new Cards("Café", "red", 2, new List<int> { 3 },"Recevez 1 pièce du joueur qui a lancé le dé" ,4));
+                Superette.Add(new Cards("Superette", "green", 2, new List<int> { 4 },"Recevez 3 pièces de la banque", 2));
+                Foret.Add(new Cards("Forêt", "blue", 2, new List<int> { 5 },"Recevez 1 pièce de la banque", 0));
+                Restaurant.Add(new Cards("Restaurant", "red", 4, new List<int> { 5 }, "Recevez 2 pièces du joueur qui a lancé le dé", 5));
+                Stade.Add(new Cards("Stade", "blue", 6, new List<int> { 6 },"Recevez 4 pièces de la banque", 3));
 
             }
             
