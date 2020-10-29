@@ -11,15 +11,18 @@ namespace Miniville
 
         public Die die;
         public Shop shop;
+        public List<List<Cards>> deck = new List<List<Cards>>();
 
         public Game()
         {
             die = new Die(6);
             shop = new Shop();
+            deck = shop.LigneAchat();
         }
 
         public void Run()
         {
+            
             while (player1.money < 20 || player2.money < 20)
             {
                 //Tour du joueur 1
@@ -42,12 +45,12 @@ namespace Miniville
 
 
                 //Acheter une nouvelle carte Et l'ajouter à sa main.
-                player1.ChooseCard(shop.LigneAchat());
+                player1.ChooseCard(deck);
 
                 //Tour du joueur 2
                 
                 //Affichage de la main
-                Console.WriteLine("Voici la main de l'ordinateur : ");
+                Console.WriteLine("\n\nVoici la main de l'ordinateur : ");
                 foreach (Cards elem in player2.hand)
                 {
                     Console.Write("| " + elem + " |");
@@ -60,7 +63,8 @@ namespace Miniville
                 //player2.ApplyGreen(green);
                 player2.ApplyEffects("red", player2, player1);
                 player1.ApplyEffects("green", player2, player1);
-                player2.ChooseCard(shop.LigneAchat());
+
+                player2.ChooseCard(deck);
             }
         }
 
