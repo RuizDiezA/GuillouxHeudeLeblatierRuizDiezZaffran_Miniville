@@ -7,7 +7,7 @@ namespace Miniville
     class Game
     {
         public Player player1 = new Player();
-        public Player player2 = new Player();
+        public IaPlayer player2 = new IaPlayer();
 
         public Die die;
         public Shop shop;
@@ -25,9 +25,9 @@ namespace Miniville
             while (player1.money < 20|| player2.money < 20)
             {
                 //Tour du joueur 1
-                
+
                 //Affichage de la main.
-                Console.WriteLine("Voici la main du joueur : ");
+                Console.WriteLine("\n\nLe joueur a " + player1.money + "Gold(s) | Voici la main du Joueur :");
                 foreach (Cards elem in player1.hand)
                 {
                     Console.Write( "| " + elem + " |");
@@ -47,9 +47,9 @@ namespace Miniville
                 player1.ChooseCard(shop);
 
                 //Tour du joueur 2
-                
+
                 //Affichage de la main
-                Console.WriteLine("\n\nVoici la main de l'ordinateur : ");
+                Console.WriteLine("\n\nL'ordinateur a " + player2.money + " Gold(s) | Voici la main de l'ordinateur :");
                 foreach (Cards elem in player2.hand)
                 {
                     Console.Write("| " + elem + " |");
@@ -70,8 +70,6 @@ namespace Miniville
             }
 
             Console.WriteLine();
-            Console.WriteLine("POGNON JOUEUR 1 : " + player1.money);
-            Console.WriteLine("POGNON JOUEUR 2 : " + player2.money);
             Console.WriteLine("FIN DU GAME");
         }
 
