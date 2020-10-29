@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.Text;
 
@@ -22,6 +22,19 @@ namespace Miniville
 
         public List<List<Cards>> LigneAchat()
         {
+            for(int i = 0; i < 6; i++)
+            {
+                ChampsBle.Add(new Cards("Champs de blé", "blue", 1, new List<int> { 1 }, 0));
+                Ferme.Add(new Cards("Ferme", "blue", 2, new List<int> { 1 }, 0));
+                Boulangerie.Add(new Cards("Boulangerie", "green", 1, new List<int> { 2, 3 }, 1));
+                Cafe.Add(new Cards("Café", "red", 2, new List<int> { 3 }, 4));
+                Superette.Add(new Cards("Superette", "green", 2, new List<int> { 4 }, 2));
+                Foret.Add(new Cards("Forêt", "blue", 2, new List<int> { 5 }, 0));
+                Restaurant.Add(new Cards("Restaurant", "red", 4, new List<int> { 5 }, 5));
+                Stade.Add(new Cards("Stade", "blue", 6, new List<int> { 6 }, 3));
+
+            }
+            
             Shops.Add(ChampsBle);
             Shops.Add(Ferme);
             Shops.Add(Boulangerie);
@@ -45,10 +58,9 @@ namespace Miniville
                 /*foreach (string item in subList)
                 {
                     Console.WriteLine(item);
-                }*///prout
+                }
             }
-            //prout
-            //prout
+            
         }
     }
 
