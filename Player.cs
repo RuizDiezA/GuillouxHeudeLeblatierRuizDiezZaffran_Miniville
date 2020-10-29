@@ -1,5 +1,6 @@
 using System;
 using System.Collections.Generic;
+using System.Drawing;
 using System.Text;
 
 namespace Miniville
@@ -31,9 +32,22 @@ namespace Miniville
 
 
 
-        public void CheckEffects()
+        public void ApplyEffects(string color, Player player1, Player player2)
         {
-            //Appeler la méthode de checkEffects de la classe piles
+            foreach(Cards card in hand)
+            {
+                if (card.color == color)
+                {
+                    card.ApplyEffect(player1, player2);
+                    Console.WriteLine("Apply" + color);
+                }
+                else if(card.color == "blue")
+                {
+                    card.ApplyEffect(player1, player2);
+                    Console.WriteLine("Apply blue");
+                }
+            }
+
         }
 
         public void BuyCard(Cards card)
@@ -50,8 +64,9 @@ namespace Miniville
             List<Cards> displayList = new List<Cards>();
             foreach(List<Cards> list in cardsList)
             {
-                if (list.Count >= 0)
+                if (list.Count > 0)
                 {
+                    Console.WriteLine("FUUUUUUUUUCK");
                     displayList.Add(list[0]);
                 }
             }
