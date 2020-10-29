@@ -61,6 +61,17 @@ namespace Miniville
             }
             
         }
+
+        public void RemoveCard(Cards choice)
+        {
+            foreach(List<Cards> item in this.Shops)
+            {
+                if (item[0].name == choice.name)
+                {
+                    item.RemoveAt(0);
+                }
+            }
+        }
     }
 
 }
