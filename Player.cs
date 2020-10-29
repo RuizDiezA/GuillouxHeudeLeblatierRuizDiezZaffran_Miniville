@@ -17,7 +17,7 @@ namespace Miniville
             this.hand = new List<Cards>();
             this.hand.Add(new Cards("Boulangerie", "green", 1, new List<int> { 2, 3 }, "Recevez 1 pièce", 0));
             this.hand.Add(new Cards("Champs de blé", "blue", 1, new List<int> { 1 }, "Recevez 1 pièce", 1));
-            this.name = "Player";
+            this.name = "Joueur";
         }
 
         //TEST CHANGEMENT
@@ -70,45 +70,26 @@ namespace Miniville
                 }
             }
 
-            Console.WriteLine("Veuillez choisir une carte : \n");
-
-            Console.WriteLine(displayList.Count + " VOICI LE SHOP");
+            Console.WriteLine(" VOICI LE SHOP");
             Console.WriteLine();
             for (int i = 0; i < displayList.Count; i++)
             {
-                Console.WriteLine("===============================");
+                Console.WriteLine("=======================================================================");
                 Console.WriteLine(i + " : " + displayList[i]);
-
-                Console.WriteLine("LA LISTE FAIT : " + displayList.Count);
             }
 
             Console.WriteLine();
-            Console.WriteLine("VOICI LA MAIN");
-            Console.WriteLine("===============================");
-            foreach (Cards card in hand)
-            {
-                Console.WriteLine("");
-                Console.WriteLine(card);
-            }
-
             Console.WriteLine();
-
+            Console.WriteLine("Veuillez choisir une carte : \n");
             int choice = Convert.ToInt32(Console.ReadLine());
 
-            Console.WriteLine("AJOUTE ");
-
-            Console.WriteLine("COUNT " + shop.Shops.Count);
-
             BuyCard(displayList[choice]);
-            Console.WriteLine("BEFORE REMOVE");
-            foreach(List<Cards> c in shop.Shops)
-            {
-                Console.WriteLine("Number card " + c.Count);
-            }
-            shop.RemoveCard(displayList[choice]);
-            Console.WriteLine("AFTER REMOVE");
-            Console.WriteLine("COUNT " + shop.Shops.Count);
+            Console.WriteLine("Le Joueur a acheté : ");
+            Console.WriteLine((displayList[choice].name));
+            Console.WriteLine("Appuyez sur Entrée pour continuer");
+            Console.ReadLine();
 
+            shop.RemoveCard(displayList[choice]);
             return displayList[choice];
         }
     }

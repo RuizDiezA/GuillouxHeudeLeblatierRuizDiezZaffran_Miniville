@@ -39,10 +39,10 @@ namespace Miniville
         //Message
         public override string ToString()
         {
-            string toString = base.ToString();
-
-            toString += String.Format("Valeur: {0}", Lancer());
-
+            string toString = "";
+            toString += "\n==========================================\n";
+            toString += String.Format("Les dés sont jetés : {0}", value);
+            toString += "\n==========================================\n";
 
             return toString;
         }
