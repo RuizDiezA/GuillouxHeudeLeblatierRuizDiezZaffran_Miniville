@@ -39,12 +39,10 @@ namespace Miniville
                 if (card.color == color)
                 {
                     card.ApplyEffect(player1, player2);
-                    Console.WriteLine("Apply" + color);
                 }
                 else if(card.color == "blue")
                 {
                     card.ApplyEffect(player1, player2);
-                    Console.WriteLine("Apply blue");
                 }
             }
 
@@ -66,15 +64,15 @@ namespace Miniville
             {
                 if (list.Count > 0)
                 {
-                    Console.WriteLine("FUUUUUUUUUCK");
                     displayList.Add(list[0]);
                 }
             }
 
-            Console.WriteLine("Veuillez choisir une carte :");
+            Console.WriteLine("Veuillez choisir une carte : \n");
 
             for (int i = 0; i < displayList.Count; i++)
             {
+                Console.WriteLine(displayList.Count + "MES COUILLES");
                 Console.WriteLine(i + " : " + displayList[i]);
             }
 

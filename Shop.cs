@@ -42,7 +42,6 @@ namespace Miniville
             Shops.Add(Superette);
             Shops.Add(Foret);
             Shops.Add(Restaurant);
-            Shops.Add(Ferme);
             Shops.Add(Stade);
 
             return Shops;
