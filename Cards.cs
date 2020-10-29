@@ -76,15 +76,13 @@ namespace Miniville
             toString += "Color : " + color + "\n";
             toString += "Prix : " + price + "\n";
             toString += "S'active pour : ";
-            toString += "Description : " + description;
-
             foreach (int num in numberToRoll)
             {
                 toString += num + ", ";
             }
             toString += "\n";
-
-            return base.ToString();
+            toString += "Description : " + description;
+            return toString;
         }
     }
 }
