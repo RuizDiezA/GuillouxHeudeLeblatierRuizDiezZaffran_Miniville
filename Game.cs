@@ -11,13 +11,12 @@ namespace Miniville
 
         public Die die;
         public Shop shop;
-        public List<List<Cards>> deck = new List<List<Cards>>();
 
         public Game()
         {
             die = new Die(6);
             shop = new Shop();
-            deck = shop.LigneAchat();
+            shop.LigneAchat();
         }
 
         public void Run()
@@ -45,7 +44,7 @@ namespace Miniville
 
 
                 //Acheter une nouvelle carte Et l'ajouter à sa main.
-                player1.ChooseCard(deck);
+                player1.ChooseCard(shop);
 
                 //Tour du joueur 2
                 
@@ -64,7 +63,7 @@ namespace Miniville
                 player2.ApplyEffects("red", player2, player1);
                 player1.ApplyEffects("green", player2, player1);
 
-                player2.ChooseCard(deck);
+                player2.ChooseCard(shop);
             }
         }
 
