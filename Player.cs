@@ -1,5 +1,6 @@
 using System;
 using System.Collections.Generic;
+using System.Drawing;
 using System.Text;
 
 namespace Miniville
@@ -24,16 +25,29 @@ namespace Miniville
         {
             this.money = money;
             this.hand = new List<Cards>();
-            this.hand.Add(new Cards("Boulangerie", "green", 1, new List<int> { 2, 3 }, "Recevez 1 pièce"));
-            this.hand.Add(new Cards("Champs de blé", "blue", 1, new List<int> { 1 }, "Recevez 1 pièce"));
+            this.hand.Add(new Cards("Boulangerie", "green", 1, new List<int> { 2, 3 }, "Recevez 1 pièce", 0));
+            this.hand.Add(new Cards("Champs de blé", "blue", 1, new List<int> { 1 }, "Recevez 1 pièce", 1));
             this.name = name;
         }
 
 
 
-        public void CheckEffects()
+        public void ApplyEffects(string color, Player player1, Player player2)
         {
-            //Appeler la méthode de checkEffects de la classe piles
+            foreach(Cards card in hand)
+            {
+                if (card.color == color)
+                {
+                    card.ApplyEffect(player1, player2);
+                    Console.WriteLine("Apply" + color);
+                }
+                else if(card.color == "blue")
+                {
+                    card.ApplyEffect(player1, player2);
+                    Console.WriteLine("Apply blue");
+                }
+            }
+
         }
 
         public void BuyCard(Cards card)
@@ -50,8 +64,9 @@ namespace Miniville
             List<Cards> displayList = new List<Cards>();
             foreach(List<Cards> list in cardsList)
             {
-                if (list.Count >= 0)
+                if (list.Count > 0)
                 {
+                    Console.WriteLine("FUUUUUUUUUCK");
                     displayList.Add(list[0]);
                 }
             }
