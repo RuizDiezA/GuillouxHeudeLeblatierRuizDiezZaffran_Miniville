@@ -93,7 +93,11 @@ namespace Miniville
 
             Console.WriteLine();
 
-            int choice = Convert.ToInt32(Console.ReadLine());
+            int choice;
+            while(!int.TryParse(Console.ReadLine(), out choice) | choice <0 | choice> displayList.Count-1)
+            {
+                Console.WriteLine("Veuillez entrer une valeur entre 0 et {0}", displayList.Count-1);
+            }
 
             Console.WriteLine("AJOUTE ");
 
