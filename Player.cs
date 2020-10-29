@@ -15,8 +15,8 @@ namespace Miniville
         {
             this.money = 2;
             this.hand = new List<Cards>();
-            this.hand.Add(new Cards("Boulangerie", "green", 1, new List<int> { 2, 3 }, "Recevez 1 pièce", 0));
-            this.hand.Add(new Cards("Champs de blé", "blue", 1, new List<int> { 1 }, "Recevez 1 pièce", 1));
+            this.hand.Add(new Cards("Boulangerie", "green", 1, new List<int> { 2, 3 }, "Recevez 2 pièces", 1));
+            this.hand.Add(new Cards("Champs de blé", "blue", 1, new List<int> { 1 }, "Recevez 1 pièce", 0));
             this.name = "Joueur";
         }
 
@@ -25,25 +25,29 @@ namespace Miniville
         {
             this.money = money;
             this.hand = new List<Cards>();
-            this.hand.Add(new Cards("Boulangerie", "green", 1, new List<int> { 2, 3 }, "Recevez 1 pièce", 0));
-            this.hand.Add(new Cards("Champs de blé", "blue", 1, new List<int> { 1 }, "Recevez 1 pièce", 1));
+            this.hand.Add(new Cards("Boulangerie", "green", 1, new List<int> { 2, 3 }, "Recevez 2 pièces", 1));
+            this.hand.Add(new Cards("Champs de blé", "blue", 1, new List<int> { 1 }, "Recevez 1 pièce", 0));
             this.name = name;
         }
 
 
 
-        public void ApplyEffects(string color, Player player1, Player player2)
+        public void ApplyEffects(string color, Player player1, Player player2, int value)
         {
             foreach(Cards card in hand)
             {
-                if (card.color == color)
+                if (card.numberToRoll.Contains(value))
                 {
-                    card.ApplyEffect(player1, player2);
+                    if (card.color == color)
+                    {
+                        card.ApplyEffect(player1, player2);
+                    }
+                    else if (card.color == "blue")
+                    {
+                        card.ApplyEffect(player1, player2);
+                    }
                 }
-                else if(card.color == "blue")
-                {
-                    card.ApplyEffect(player1, player2);
-                }
+                
             }
 
         }
