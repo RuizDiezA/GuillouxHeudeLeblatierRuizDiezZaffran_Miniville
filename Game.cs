@@ -40,6 +40,8 @@ namespace Miniville
                 Thread.Sleep(1000);
                 Console.Clear();
                 DisplayHand();
+                if (player1.money >= 20 || player2.money >= 20)
+                    break;
                 //Tour du joueur 2
 
                 die.Lancer();
@@ -53,7 +55,16 @@ namespace Miniville
             }
 
             Console.WriteLine();
-            Console.WriteLine("FIN DU GAME");
+            if (player1.money > player2.money)
+            {
+                Console.WriteLine("FIN DU GAME : Vous avez gagné");
+            }
+            else if(player1.money < player2.money)
+            {
+                Console.WriteLine("FIN DU GAME : Vous avez perdu");
+            }
+            else
+            Console.WriteLine("FIN DU GAME : EGALITE");
         }
 
         public void DisplayHand()
