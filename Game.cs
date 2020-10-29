@@ -10,11 +10,12 @@ namespace Miniville
         public Player player2 = new Player();
 
         public Die die;
-        public Shop shop = new Shop();
+        public Shop shop;
 
         public Game()
         {
             die = new Die(6);
+            shop = new Shop();
         }
 
         public void Run()
@@ -33,13 +34,12 @@ namespace Miniville
 
                 //Lancer de dé et résolution des effets.
                 die.Lancer();
-                //player1.ApplyBlue()
-                //player2.ApplyBlue();
-                //player1.ApplyGreen();
-                //player2.ApplyRed();
+                //player2.ApplyRed("red");
+                //player1.ApplyGreen("green");
+
 
                 //Acheter une nouvelle carte Et l'ajouter à sa main.
-                player1.BuyCard(new Cards());
+                player1.ChooseCard(shop.LigneAchat());
 
                 //Tour du joueur 2
                 
@@ -53,12 +53,10 @@ namespace Miniville
 
 
                 die.Lancer();
+                //player1.ApplyRed(red);
+                //player2.ApplyGreen(green);
 
-                //player1.ApplyBlue()
-                //player2.ApplyBlue();
-                //player2.ApplyGreen();
-                //player1.ApplyRed();
-                player2.BuyCard(new Cards()/*Card*/);
+                player2.ChooseCard(shop.LigneAchat());
             }
         }
 
