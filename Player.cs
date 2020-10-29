@@ -58,7 +58,7 @@ namespace Miniville
         }
 
         //public Cards ChooseCard(List<List<Cards>> cardsList)
-        public Cards ChooseCard(Shop shop)
+        public virtual Cards ChooseCard(Shop shop)
         {
             List<List<Cards>> cardsList = shop.Shops;
             List<Cards> displayList = new List<Cards>();
