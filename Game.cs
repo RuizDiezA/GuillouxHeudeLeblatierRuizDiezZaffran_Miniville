@@ -36,6 +36,9 @@ namespace Miniville
                 die.Lancer();
                 //player2.ApplyRed("red");
                 //player1.ApplyGreen("green");
+                player2.ApplyEffects("red", player1, player2);
+                player1.ApplyEffects("green", player1, player2);
+
 
 
                 //Acheter une nouvelle carte Et l'ajouter à sa main.
@@ -55,7 +58,8 @@ namespace Miniville
                 die.Lancer();
                 //player1.ApplyRed(red);
                 //player2.ApplyGreen(green);
-
+                player2.ApplyEffects("red", player2, player1);
+                player1.ApplyEffects("green", player2, player1);
                 player2.ChooseCard(shop.LigneAchat());
             }
         }
