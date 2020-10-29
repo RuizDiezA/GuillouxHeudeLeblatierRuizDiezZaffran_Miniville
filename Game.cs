@@ -28,12 +28,13 @@ namespace Miniville
                 Console.Clear();
                 DisplayHand();
                 //Tour du joueur 1
-
+                Console.WriteLine("======= TOUR DU JOUEUR =========");
                 //Lancer de dé et résolution des effets.
                 die.Lancer();
                 Console.WriteLine(die);
-                player2.ApplyEffects("red", player1, player2);
-                player1.ApplyEffects("green", player1, player2);
+
+                player2.ApplyEffects("red", player2, player1, die.value);
+                player1.ApplyEffects("green", player1, player2, die.value);
 
                 //Acheter une nouvelle carte Et l'ajouter à sa main.
                 player1.ChooseCard(shop);
@@ -43,11 +44,11 @@ namespace Miniville
                 if (player1.money >= 20 || player2.money >= 20)
                     break;
                 //Tour du joueur 2
-
+                Console.WriteLine("======= TOUR De L'ORDINATEUR =========");
                 die.Lancer();
                 Console.WriteLine(die);
-                player2.ApplyEffects("red", player2, player1);
-                player1.ApplyEffects("green", player2, player1);
+                player1.ApplyEffects("red", player1, player2, die.value);
+                player2.ApplyEffects("green", player2, player1, die.value);
 
                 player2.ChooseCard(shop);
                 Thread.Sleep(1300);
@@ -55,16 +56,19 @@ namespace Miniville
             }
 
             Console.WriteLine();
-            if (player1.money > player2.money)
+            if(player1.money > player2.money)
             {
-                Console.WriteLine("FIN DU GAME : Vous avez gagné");
+                Console.WriteLine("FIN DU GAME : Vous avez gagné!");
             }
             else if(player1.money < player2.money)
             {
-                Console.WriteLine("FIN DU GAME : Vous avez perdu");
+                Console.WriteLine("FIN DU GAME : Vous avez perdu!");
             }
             else
-            Console.WriteLine("FIN DU GAME : EGALITE");
+            {
+                Console.WriteLine("FIN DU GAME : Match nul!");
+            }
+
         }
 
         public void DisplayHand()
