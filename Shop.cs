@@ -18,7 +18,7 @@ namespace Miniville
         List<Cards> Restaurant = new List<Cards>();
         List<Cards> Stade = new List<Cards>();
 
-        List<List<Cards>> Shops = new List<List<Cards>>();
+        public List<List<Cards>> Shops = new List<List<Cards>>();
 
         public List<List<Cards>> LigneAchat()
         {
@@ -66,7 +66,7 @@ namespace Miniville
         {
             foreach(List<Cards> item in this.Shops)
             {
-                if (item[0].name == choice.name)
+                if (item.Count > 0 && item[0].name == choice.name )
                 {
                     item.RemoveAt(0);
                 }

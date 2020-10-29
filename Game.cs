@@ -22,7 +22,7 @@ namespace Miniville
         public void Run()
         {
             
-            while (player1.money < 20 || player2.money < 20)
+            while (player1.money < 20|| player2.money < 20)
             {
                 //Tour du joueur 1
                 
@@ -64,7 +64,15 @@ namespace Miniville
                 player1.ApplyEffects("green", player2, player1);
 
                 player2.ChooseCard(shop);
+
+                Console.WriteLine();
+                Console.WriteLine("FIN DE BOUCLE");
             }
+
+            Console.WriteLine();
+            Console.WriteLine("POGNON JOUEUR 1 : " + player1.money);
+            Console.WriteLine("POGNON JOUEUR 2 : " + player2.money);
+            Console.WriteLine("FIN DU GAME");
         }
 
         public override string ToString()
