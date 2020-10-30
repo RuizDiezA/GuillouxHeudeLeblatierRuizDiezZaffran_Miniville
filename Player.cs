@@ -58,6 +58,9 @@ namespace Miniville
             {
                 money -= card.price;
                 this.hand.Add(card);
+            }else
+            {
+                Console.WriteLine("// ARGENT REQUIS INSUFFISANT ! //");
             }
         }
 
