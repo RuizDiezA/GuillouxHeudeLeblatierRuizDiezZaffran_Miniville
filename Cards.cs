@@ -73,6 +73,18 @@ namespace Miniville
                     else
                         Console.WriteLine("La carte " + this.name + " est activée, " + player1.name + " est fauché, il ne peut rien donner à " + player2.name);
                     break;
+                case 6:
+                    player1.money += 5;
+                    Console.WriteLine("La carte " + this.name + " est activée, " + player1.name + " gagne cinq pièces");
+                    break;
+                case 7:
+                    player1.money += 6;
+                    Console.WriteLine("La carte " + this.name + " est activée, " + player1.name + " gagne six pièces");
+                    break;
+                case 8:
+                    player1.money += 7;
+                    Console.WriteLine("La carte " + this.name + " est activée, " + player1.name + " gagne sept pièces");
+                    break;
                 default:
                     break;
             }
