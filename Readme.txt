@@ -24,12 +24,13 @@ Le jeu est composé de cartes 14 batiments de couleur, effet et valeur différen
 [11,12] Vert - Marché : Recevez 4 pièces - 3$
 ================================================================================================
 Un tour de jeu s’organise comme suit :
-1. Le joueur A lance le dé.
-2. Le joueur B regarde s’il a des cartes bleues ou rouges qui s’activent et il en applique
+1. Le joueur A choisit le nombre de dés qu'il souhaite lancer.
+2. Le joueur A lance le dé.
+3. Le joueur B regarde s’il a des cartes bleues ou rouges qui s’activent et il en applique
 les effets
-3. Le joueur A regarde s’il a des cartes bleues ou vertes qui s’activent et il en applique
+4. Le joueur A regarde s’il a des cartes bleues ou vertes qui s’activent et il en applique
 les effets
-4. Le joueur A peut acheter une nouvelle carte et l’ajouter à sa ville. Il est possible d’avoir
+5. Le joueur A peut acheter une nouvelle carte et l’ajouter à sa ville. Il est possible d’avoir
 plusieurs fois la même carte, les effets s’additionnent.
 Une fois le tour du joueur A terminé, c’est au tour du joueur B de réaliser les mêmes
 actions.
