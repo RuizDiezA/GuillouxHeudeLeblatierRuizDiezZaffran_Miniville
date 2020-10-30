@@ -15,7 +15,7 @@ namespace Miniville
 
         public Game()
         {
-            die = new Die(6);
+            die = new Die();
             shop = new Shop();
             shop.LigneAchat();
         }

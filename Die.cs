@@ -8,13 +8,12 @@ namespace Miniville
     {
 
         public int value;
-        public int nbCotes;
 
 
         //Constructeur
-        public Die(int nbCotes)
+        public Die()
         {
-            this.nbCotes = nbCotes;
+            
             
 
         }
@@ -28,8 +27,8 @@ namespace Miniville
 
             Random rand = new Random();
 
-            //Valeur entre 1 et le max de côté du dé
-            value = rand.Next(1, nbCotes+1);
+            
+            value = rand.Next(1, 7);
 
 
             return value;
