@@ -86,7 +86,8 @@ namespace Miniville
             Console.WriteLine();
 
             int choice;
-            while(!int.TryParse(Console.ReadLine(), out choice) | choice <0 | choice> displayList.Count-1)
+            Console.WriteLine("Veuillez choisir une carte (entre 0 et {0})", displayList.Count - 1);
+            while (!int.TryParse(Console.ReadLine(), out choice) | choice <0 | choice> displayList.Count-1)
             {
                 Console.WriteLine("Veuillez entrer une valeur entre 0 et {0}", displayList.Count-1);
             }
