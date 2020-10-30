@@ -13,6 +13,14 @@ namespace Miniville
             this.name = "Ordinateur";
         }
 
+
+        public int ChooseDiceNb()
+        {
+            int i = 1;
+            Random r = new Random();
+            i = r.Next(1, 3);
+            return i;
+        }
         public override Cards ChooseCard(Shop shop)
         {
             List<List<Cards>> cardsList = shop.Shops;
@@ -34,7 +42,6 @@ namespace Miniville
             Console.WriteLine();
             int choice = r.Next(0, displayList.Count);
             Console.WriteLine("L'Ordinateur choisit une carte : \n");
-            Console.WriteLine("Je réfléchis ...");
             BuyCard(displayList[choice]);
             Console.WriteLine("L'Ordinateur a choisi :");
 
